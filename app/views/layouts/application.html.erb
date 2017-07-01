@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KnowledgeStocker</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,32 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Knowledge Stocker", "#", id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "新規登録", "#" %></li>
+            <li><%= link_to "ログイン", "#" %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><%= link_to "About", "#" %></li>
+            <li><%= link_to "contact", "#" %></li>
+          </ul>
+        </nav>
+        <small>
+          &copy;2017 Knowledge Stocker inc.
+        </small>
+      </div>
+    </footer>
   </body>
 </html>
