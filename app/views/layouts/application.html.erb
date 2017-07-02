@@ -6,35 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <%= render "layouts/shim" %>
   </head>
-
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Knowledge Stocker", "#", id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "新規登録", "#" %></li>
-            <li><%= link_to "ログイン", "#" %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render "layouts/header" %>
     <div class="container">
       <%= yield %>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <nav>
-          <ul>
-            <li><%= link_to "About", "#" %></li>
-            <li><%= link_to "contact", "#" %></li>
-          </ul>
-        </nav>
-        <small>
-          &copy;2017 Knowledge Stocker inc.
-        </small>
-      </div>
-    </footer>
+    <%= render "layouts/footer" %>
   </body>
 </html>
