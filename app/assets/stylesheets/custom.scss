@@ -1,6 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*    Universal    */
+
+body {
+  padding-top: 60px;
+}
+
+.center {
+  text-align: center;
+}
+
 /*    Typography    */
 
 body {
@@ -13,27 +23,102 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 36px;
+  margin-bottom: 30px;
 }
 
 h2 {
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
 p {
   font-size: 16px;
 }
 
+/*    Header    */
+
 header {
+  width: 100%;
+  background-color: #00bfff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   #logo {
     float: left;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
-
-    margin-top: 10px;
     &:hover {
       color: #fff;
       text-decoration: none;
     }
+  }
+  ul {
+    margin: 0;
+  }
+  .nav-menu {
+    float: right;
+    list-style: none;
+    margin-top: 4px;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/*    Wrapper    */
+
+
+
+/*    Footer    */
+
+footer {
+  width: 100%;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 13px;
+  padding: 30px 0px;
+  font-size: 14px;
+  .nav-menu {
+    text-align: center;
+    margin-bottom: 30px;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .sns {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    border-top: solid 1px #5d5d5d;
+    li {
+      display: inline;
+      margin: 0 10px;
+      a {
+        color: #fff
+      }
+    }
+  }
+  small {
+    display: block;
+    text-align: center;
   }
 }
