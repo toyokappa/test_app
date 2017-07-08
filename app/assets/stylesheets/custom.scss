@@ -95,7 +95,23 @@ header {
 
 /*    Wrapper    */
 
+/*    Aside    */
 
+aside {
+  section.user_info {
+    text-align: center;
+  }
+  section{
+    .gravatar {
+      margin-bottom: 10px;
+      border-radius: 100%;
+    }
+    .user_name{
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
 
 /*    Footer    */
 
