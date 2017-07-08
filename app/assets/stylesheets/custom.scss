@@ -11,6 +11,21 @@ body {
   text-align: center;
 }
 
+/*    mixin, valuables, etc    */
+@mixin box_sizing {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.debug_dump {
+clear: both;
+float: left;
+width: 100%;
+margin-top: 45px;
+@include box_sizing;
+}
+
 /*    Typography    */
 
 body {
@@ -23,11 +38,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 36px;
+  text-align: center;
   margin-bottom: 30px;
 }
 
 h2 {
   font-size: 24px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -78,7 +95,23 @@ header {
 
 /*    Wrapper    */
 
+/*    Aside    */
 
+aside {
+  section.user_info {
+    text-align: center;
+  }
+  section{
+    .gravatar {
+      margin-bottom: 10px;
+      border-radius: 100%;
+    }
+    .user_name{
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
 
 /*    Footer    */
 
@@ -88,6 +121,7 @@ footer {
   color: #fff;
   font-size: 13px;
   padding: 30px 0px;
+  margin-top: 50px;
   font-size: 14px;
   .nav-menu {
     text-align: center;
@@ -120,5 +154,35 @@ footer {
   small {
     display: block;
     text-align: center;
+  }
+}
+
+/*    Form    */
+
+input, textarea, select, .uneditable-input {
+  font-size: 18px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 30px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin-bottom: 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
   }
 }
